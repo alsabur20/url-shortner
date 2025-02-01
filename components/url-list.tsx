@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
-import { CopyIcon, Eye, EyeIcon } from "lucide-react"
+import { CopyIcon, EyeIcon } from "lucide-react"
 
 function UrlList() {
   return (
