@@ -1,4 +1,6 @@
 import prisma from "@/lib/db";
+import {redirect} from "next/navigation";
+
 
 type RedirectPageProps = {
     params: Promise<{ shortcode: string }>;
@@ -17,5 +19,5 @@ export default async function RedirectPage({params}: RedirectPageProps) {
         return new Response("URL not found", {status: 404});
     }
 
-    return Response.redirect(url.originalUrl, 307);
+    return redirect(url.originalUrl);
 }
